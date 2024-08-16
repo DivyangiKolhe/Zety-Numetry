@@ -1,0 +1,159 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.nav-main {
+    padding: 1rem 10rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.nav-left{
+    width: 10rem;
+    height: 7rem;
+}
+.nav-left img {
+    width: 100%;
+    height: 100%;
+}
+
+.nav-right {
+    display: flex;
+    align-items: center;
+    gap: 7rem;
+}
+
+.right-left {
+    display: flex;
+    align-items: center;
+    gap: 5rem;
+    position: relative;
+}
+
+.nav-item {
+    position: relative;
+    align-items: center;
+}
+
+.nav-item a {
+    text-decoration: none;
+    color: black;
+    padding: 0.5rem 0;
+    margin-right: 0.5rem;
+}
+
+.hover-content {
+    position: absolute;
+    top: 100%; /* Position it below the link */
+    left: 0;
+    background-color: white;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    width: 200px;
+
+    display: none; /* Hidden by default */
+    z-index: 10;
+    width: 25rem;
+
+}
+
+.nav-item:hover .hover-content {
+    display: block; 
+}
+
+
+.nav-top, .nav-mid{
+    padding: 1rem;
+}
+.nav-top{
+    display: flex;
+    gap: 1rem;
+}
+.nav-top-img {
+    height: 10%;
+    width: 40%;
+}
+.nav-top-img img{
+    width: 100%;
+    height: 100%;
+}
+.nav-top-text {
+    margin-top: 0.5rem;
+    font-size: 0.9rem;
+    color: #333;
+}
+.nav-top-text p:hover{
+    color: #2C40F2;
+}
+.nav-top-head{
+    font-size: 1.5rem;
+    font-weight: 500;
+}
+.nav-top-line{
+    color: rgb(110, 109, 109);
+    font-size: 0.8rem;
+    margin: 1rem 0;
+}
+
+.nav-bottom button {
+    width: 100%; /* Set the button to take full width */
+    padding: 1rem;
+    background-color: #ecb564;
+    color: black;
+    border: none;
+    cursor: pointer;
+    font-size: 1rem;
+    font-weight: 600;
+    text-align: center; /* Ensure text is centered */
+}
+.nav-bottom button:hover{
+    background-color: #FBAF3B;
+}
+
+.right-right {
+    padding: 0.8rem 2rem;
+    border-radius: 50px;
+    background-color: #141e77;
+}
+
+.right-right button {
+    border: none;
+    color: white;
+    font-size: 0.9rem;
+    font-weight: 600;
+    background-color: transparent;
+    cursor: pointer;
+}
+
+.right-right:hover {
+    background-color: #2C40F2;
+}
+/* nav-mid */
+.nav-mid {
+    background-color: #F1F8FE;
+}
+
+.nav-mid-links {
+    margin: 1rem 0;
+    cursor: pointer;
+}
+
+.nav-mid-link-name {
+    font-size: 0.9rem;
+    font-weight: 500;
+    color: #2a323d;
+    transition: color 0.3s ease; /* Smooth transition */
+}
+
+.nav-mid-link-text {
+    font-size: 0.8rem;
+    color: rgb(110, 109, 109);
+    margin: 0.5rem 0;
+    transition: color 0.3s ease; /* Smooth transition */
+}
+
+.nav-mid-links:hover .nav-mid-link-name,
+.nav-mid-links:hover .nav-mid-link-text {
+    color: #2C40F2; /* Change color to blue on hover */
+}

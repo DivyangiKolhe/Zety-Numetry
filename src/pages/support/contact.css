@@ -1,0 +1,211 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+.c-main{
+    padding: 2rem 5rem;
+}
+.img-card{
+    display: flex;
+    justify-content: space-between;
+}
+.img-text{
+    margin-top: 5rem;
+    text-align: center;
+}
+.c-head{
+    font-size: 2.8rem;
+    font-weight: 600;
+}
+.c-gray{
+    color: #646C78;
+    font-size: 0.9rem;
+    margin: 1.5rem 0;
+}
+.country{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.icon{
+    color: #414348;
+}
+.no-m{
+    margin: 0.5rem 0;
+    font-size: 1rem;
+}
+.no{
+    font-weight: 700;
+    font-size: 1rem;
+}
+.c-logos{
+    margin: 5rem 7rem;
+}
+
+.form{
+    background-color: #F1F8FE;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 4rem 14rem;
+}
+.c-form-img{
+    width: 30%;
+    height: 20%;
+}
+.c-form-img img{
+    width: 100%;
+    height: 100%;
+}
+.form-head{
+    font-size: 2.5rem;
+    font-weight: 600;
+}
+.c-form form{
+    width: 35rem;
+}
+.c-form form input, textarea{
+    padding: 1.3rem;
+    width: 100%;
+    margin: 1rem 0;
+    border: 1px solid #c8cace;  
+    border-radius: 5px;
+    font-size: 1rem;
+}
+.c-form form input:focus, textarea:focus {
+    border-color: black; 
+    outline: none; 
+    
+}
+.combo-inp{
+    display: flex;
+    gap: 2rem;
+}
+.c-btn{
+    text-align: right;
+}
+.c-btn p{
+    font-size: 0.8rem;
+}
+.send-btn{
+    padding: 0.8rem 0;
+}
+.send-btn button{
+    background-color: #f0c062;
+    border: none;
+    color: black;
+    font-size: 1rem;
+    font-weight: 400;
+    padding: 1rem 3rem;
+    border-radius: 50px;
+    font-weight: 600;
+}
+.send-btn button:hover{
+    background-color: #efb748;
+}
+.blue-l-card{
+    padding: 6rem 10rem;
+    text-align: center;
+    background-image: url('../../images/contact/triangles-400.jpg');
+}
+.blue-l-card p{
+    font-size: 2rem;
+    color: white;
+    font-weight: 500;
+    margin-bottom: 2.5rem;
+}
+.dream-btn{
+    padding: 0.8rem 0;
+}
+.dream-btn button{
+    background-color: white;
+    border: none;
+    color: black;
+    font-size: 1rem;
+    font-weight: 400;
+    padding: 1rem 3rem;
+    border-radius: 50px;
+    font-weight: 600;
+}
+.dream-btn button:hover{
+    background-color: #DCEAF8;
+}
+.tabs{
+    width: 100%;
+    background-color: #F1F8FE;
+    padding: 1rem 14rem;
+}
+.tabs a{
+    color: #646C78;
+}
+.tabs a{
+    text-decoration: none;
+}
+.contact-cards{
+    padding: 0 8rem;
+    display: flex;
+    justify-content: space-evenly;
+    position: relative;
+}
+.c-blue-card {
+    background-image: url('../../images/contact/triangles-400.jpg');
+    width: fit-content;
+    padding: 2rem;
+    position: relative; /* Allows positioning of child elements relative to this container */
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Centers content horizontally */
+}
+.time{
+    display: flex;
+    justify-content: space-between;
+    margin: 0.5rem 0;
+}
+.gray-c-txt{
+    text-align: center;
+    color: #bababd;
+    font-size: 0.95rem;
+    margin: 0.5rem 0;
+}
+.c-top, .c-bottom{
+    color: white;
+    margin: 1rem 0;
+}
+.c-top{
+    text-align: center;
+}
+.country-name{
+    font-size: 1.5rem;
+    font-weight: 500;
+}
+.s-font{
+    font-size: 0.88rem;
+}
+.day, .time{
+    font-size: 0.9rem;
+}
+.phone-icon-border {
+    width: 4rem;
+    height: 4rem;
+    border-radius: 50%;
+    border: 2.5px solid #4791FB;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    top: -2rem; /* Moves the circle up by half its height */
+}
+.phone-bg {
+    background-color: #4791FB;
+    border-radius: 50%;
+    width: 3rem;
+    height: 3rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.phone {
+    color: white;
+    font-size: 1.5rem;
+}

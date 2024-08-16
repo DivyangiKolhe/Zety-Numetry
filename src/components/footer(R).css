@@ -1,0 +1,132 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Pacifico&display=swap');
+*{
+    /* background-color: #F9FAFF; */
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family:  "Open Sans", sans-serif;
+    transition: 0.2s ease-in-out;
+}
+.footer-top, .footer-bottom{
+    background-color: #001B35;
+    color: white;
+    padding: 2rem 10rem;
+}
+.footer-top p{
+    text-align: center;
+    font-size: 0.76rem;
+    
+}
+.footer-top-logo{
+    width: 10rem;
+    height: 7rem;
+}
+.footer-top-logo img{
+    width: 100%;
+    height: 100%;
+}
+.copy p{
+    font-size: 0.7rem;
+}
+.footer-bottom{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  
+}
+.logos-c{
+    display: flex;
+    gap: 2rem;
+   
+}
+.logo{
+    width: 4rem;
+    height: 2.5rem;
+}
+.cprw{
+    height: 3rem;
+    
+}
+
+.logo img{
+    width: 100%;
+    height: 100%;
+}
+.footer-container{
+    background-color: #07142B;
+    padding: 4rem 10rem;
+}
+.sections{
+    display: flex;
+    justify-content: space-between;
+ 
+}
+.head p{
+    color: #6a7382;
+    font-size: 0.9rem;
+    text-transform: uppercase;
+    font-weight: 600;
+   
+}
+.head p:hover{
+    color: #5e96f7;
+    cursor: pointer;
+}
+.links{
+    display: flex;
+    flex-direction: column;
+    line-height: 2.5rem;
+}
+.links a{
+    text-decoration: none;
+    color: white;
+    font-size: 0.8rem;
+}
+.links a:hover{
+    color: #5e96f7;
+}
+
+
+/* ---------------- */
+.footer-text {
+    margin-bottom: 1rem;
+  }
+  .footer-text p{
+    color: white;
+    font-size: 0.8rem;
+    margin-bottom: 1rem;
+    line-height: 1.7rem;
+  }
+.create-resume-button {
+    border-radius: 50px;
+    background-color: #f0c14b;
+    border: 1px solid #a88734;
+    padding: 1rem 2rem;
+    margin-bottom: 1rem;
+    cursor: pointer;
+    font-weight: 600;
+    font-size: 1rem;
+  }
+  .footer-social-links {
+    display: flex;
+    gap: 1rem;
+    margin-bottom: 1rem;
+  }
+  
+  .footer-social-links a {
+    color: #fff;
+    font-size: 1.5rem;
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+  }
+  
+  .footer-social-links a:hover {
+    color: #1da1f2;
+  }
+  .footer-contact {
+    margin-top: 1rem;
+  }
+  .footer-logo{
+    width: 20%;
+  }
