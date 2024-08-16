@@ -1,3 +1,4 @@
+
 /* Global Styles */
 body {
   font-family: 'Open Sans', sans-serif;
@@ -9,13 +10,13 @@ body {
 }
 
 /* About Us Section */
-.about-us-container {
+.about-us-container1 {
   text-align: center;
   padding: 20px;
 }
 
-.about-us-banner {
-  background-image: url('../../images/about-us-image.jpg');
+.about-us-banner1 {
+  background-image: url('../../images/about/about-us-image.jpg');
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
@@ -70,25 +71,29 @@ body {
 }
 
 /* Media Mentions Section */
-.media-mentions {
+.media-mention1 {
   display: flex;
   justify-content: center;
   align-items: center;
-  flex-wrap: wrap;
+  flex-wrap: nowrap;
   margin: 20px 0;
 }
 
-.media-mentions img {
-  margin: 0 10px;
+.media-mention1 img {
+  margin: 0 15px;
   height: 40px;
   opacity: 0.8;
   transition: opacity 0.3s ease;
 }
 
-.media-mentions img:hover {
+.media-mention1 img:hover {
   opacity: 1;
 }
 
+.Text2-banner {
+  padding-top: 60px; /* Add padding to create space above this section */
+
+}
 /* Team Section */
 .team-section {
   margin-top: 50px;
@@ -129,6 +134,9 @@ body {
   color: #7f8c8d;
   line-height: 1.4;
 }
+.team-member h5 {
+  color: blue;
+}
 
 /* Responsive adjustments */
 @media (max-width: 768px) {
@@ -137,14 +145,18 @@ body {
   }
 }
 
-/* Timeline Section */
 .timeline {
   position: relative;
   max-width: 1200px;
   margin: 0 auto;
-  padding: 20px 0;
+  padding: 40px 20px; /* Padding inside the timeline section */
   text-align: center;
+  background-color: #f9f9f9; /* Optional: Background color for visual separation */
+  border-top: 2px solid #ddd; /* Optional: Border-top for visual separation */
+  border-bottom: 2px solid #ddd; /* Optional: Border-bottom for visual separation */
+  margin-bottom: 60px; /* Add margin to create space below the timeline */
 }
+
 
 .timeline-line {
   position: absolute;
@@ -238,7 +250,7 @@ body {
 
 /* Footer Banner */
 .footer-banner {
-  background-image: url('../../images/about/about-us-image.jpg');
+  background-image: url('../assets/about-us-image.jpg');
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
@@ -266,30 +278,33 @@ body {
   background-color: #0056b3;
 }
 
-/* Carousel */
-/* Carousel Styles */
-.carousel-container {
+/* Carousel Container */
+/* Carousel Container */
+.carousel-container1 {
   display: flex;
   align-items: center;
   justify-content: center;
   position: relative;
-  width: 80%;
-  margin: 0 auto;
+  width: 100%; /* Full width */
   overflow: hidden;
 }
 
-.carousel {
+/* Carousel */
+.carousel1 {
   display: flex;
-  gap: 20px;
+  gap: 20px; /* Space between items */
   scroll-behavior: smooth;
   overflow-x: auto;
   scroll-snap-type: x mandatory;
   padding: 20px 0;
+  scroll-snap-align: start;
+  width: calc(100% - 80px); /* Adjusted to account for scroll buttons */
 }
 
+/* Carousel Item */
 .carousel-item {
-  flex: 0 0 300px;
-  scroll-snap-align: center;
+  flex: 0 0 calc(33.333% - 20px); /* 3 items visible at a time with gap */
+  scroll-snap-align: start;
   background-color: #fff; /* Fallback color */
   border-radius: 10px;
   overflow: hidden;
@@ -303,17 +318,20 @@ body {
   color: #fff; /* Text color to contrast background */
 }
 
+/* Carousel Item Hover Effect */
 .carousel-item:hover {
   transform: translateY(-5px);
   box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
 }
 
+/* Carousel Item Background */
 .carousel-item-bg {
-  padding: 20px;
+  padding: 15px;
   position: relative;
   z-index: 1;
 }
 
+/* Carousel Item Image */
 .carousel-item-bg img {
   max-width: 100%;
   height: auto;
@@ -321,20 +339,61 @@ body {
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
+/* Carousel Item Text */
 .carousel-item p {
   margin-top: 10px;
-  font-size: 1em;
+  font-size: 0.9em; /* Adjusted font size */
   line-height: 1.4;
   padding: 10px;
   background: rgba(12, 12, 12, 0.5); /* Semi-transparent background for text */
   border-radius: 4px;
 }
 
+/* Scroll Arrow */
+.scroll-arrow {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 50px; /* Button width */
+  height: 20%; /* Match height of carousel items */
+  background-color: #007bff; /* Button background color */
+  color: #fff; /* Button text color */
+  border: none;
+  border-radius: 50%; /* Rounded button */
+  font-size: 1.5em; /* Adjust size of arrow */
+  cursor: pointer;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transition: background-color 0.3s ease, box-shadow 0.3s ease;
+  position: absolute; /* Position the button absolutely */
+  top: 50%;
+  transform: translateY(-50%);
+  z-index: 10; /* Ensure button is on top */
+}
 
+/* Scroll Arrow Left */
+.scroll-arrow.left {
+  left: 10px; /* Position left arrow */
+}
+
+/* Scroll Arrow Right */
+.scroll-arrow.right {
+  right: 10px; /* Position right arrow */
+}
+
+/* Scroll Arrow Hover Effect */
+.scroll-arrow:hover {
+  background-color: #0056b3; /* Darker button color on hover */
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+
+/* Testimonials Section */
 .testimonials {
-  background-color: #fff;
-  padding: 40px 20px;
+  background-color: #f9f9f9; /* Light gray background for contrast */
+  padding: 60px 20px; /* Increased padding for a spacious look */
   text-align: center;
+  border-radius: 12px; /* Rounded corners for testimonials section */
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1); /* Soft shadow around the section */
 }
 
 .testimonials h2 {
@@ -368,3 +427,5 @@ body {
 .footer a:hover {
   text-decoration: underline;
 }
+
+  

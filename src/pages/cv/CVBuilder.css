@@ -29,10 +29,10 @@ img {
 
 /* Main Container */
 .main-container {
-  /* background: linear-gradient(to right, #00b4db, #0083b0); */
-  padding: 5rem, 10rem;
+  background: linear-gradient(to right, #00b4db, #0083b0);
+  padding: 50px 0;
   text-align: center;
-  /* color: #fff; */
+  color: #fff;
 }
 
 .main-content-box {
@@ -54,20 +54,18 @@ img {
 }
 
 .cta-button {
-  background: #f1b65d;
-  color: black;
+  background: #e74c3c;
+  color: #fff;
   border: none;
-  margin-top: 1rem;
   padding: 15px 30px;
-  font-size: 1rem;
-  font-weight: 600;
+  font-size: 1.2em;
   cursor: pointer;
   transition: background 0.3s ease;
-  border-radius: 50px;
+  border-radius: 8px;
 }
 
 .cta-button:hover {
-  background: #FBAF3B;
+  background: #c0392b;
 }
 
 
@@ -77,31 +75,26 @@ img {
 
 .steps-container {
   display: flex;
-  justify-content: center;
-  align-items: center;
-  padding: 5rem 10rem;
+  justify-content: center; /* Center the items horizontally */
+  align-items: flex-start; /* Align items to the top */
+  gap: 20px; /* Add space between the steps */
+  flex-wrap: wrap; /* Ensure responsiveness */
 }
 
-.step-cv-build {
-display: flex;
-flex-direction: column;
-max-width: 20rem;
-margin: 0;
+.step {
+  flex: 1; /* Allow steps to grow and shrink equally */
+  max-width: 200px; /* Optional: limit the width of each step */
+  text-align: left;
+  margin: 10px; /* Optional: add margin around each step */
 }
-.step-cv-build h3, .step-cv-build p{
-  margin: -2rem 1rem;
-}
-.step p{
-  font-size: 0.9rem;
-}
+
 .step img {
-  width: 15rem; 
-  height: 13rem; 
-  transition: transform 0.3s; 
+  width: 100%; /* Ensure images scale within the step container */
+  max-width: 180px; /* Set a maximum width for images */
+  height: auto; /* Maintain aspect ratio */
+  transition: transform 0.3s; /* Smooth transition for hover effect */
 }
-.bold-p{
-  font-weight: 600;
-}
+
 .step:hover img {
   transform: scale(1.1); /* Slightly enlarge image on hover */
 }
@@ -112,23 +105,28 @@ margin: 0;
 
 .template-section {
   text-align: center;
-  padding: 5rem;
+  padding: 20px;
+  width: 100%;
+  overflow: hidden;
 }
 
 .slick-slider {
   margin: 0 auto;
-  width: 60%;
+  width: 80%;
 }
 
 .template-card {
   position: relative;
-  width: 80% !important;
-  height: 50% !important;
   text-align: center;
   border: 1px solid #ccc;
   border-radius: 8px;
   overflow: hidden;
   transition: transform 0.3s ease;
+  box-sizing: border-box; 
+  margin:  0 15px;  
+  width: 80%; 
+  max-width: 300px; /* */
+
 }
 
 .template-card:hover {
@@ -136,8 +134,8 @@ margin: 0;
 }
 
 .template-image {
-  width: 100%;
-  height: 50% !important;;
+  width: 80%;
+  height: auto;
 }
 
 .template-info {
@@ -146,7 +144,7 @@ margin: 0;
 
 .use-template-button {
   position: absolute;
-  bottom: 10rem;
+  bottom: 10px;
   left: 50%;
   transform: translateX(-50%);
   display: none;
@@ -154,37 +152,42 @@ margin: 0;
   background-color: #074485;
   color: #fff;
   border: none;
-  border-radius: 50px;
-  width: fit-content;
+  border-radius: 5px;
   cursor: pointer;
   transition: background-color 0.3s ease;
+  margin: 10px;
+  margin-top: 10px;
+
+
 }
 
 .template-card:hover .use-template-button {
   display: block;
 }
 
-.customer-section {
+.customer-section1 {
   background: #fff;
-  padding: 5rem 22rem;
+  padding: 50px 0;
   text-align: center;
 }
-.customer-section p{
-  margin: 1.5rem 0;
-  font-size: 1.02rem;
-  line-height: 1.7rem;
+
+.logo-container1 {
+  display: flex;
+  justify-content: space-around;
+  max-width: 1200px;
+  margin: 20px auto;
+  flex-wrap: wrap;
 }
 
-
-.logo-img-container {
-  width: 100%;
-  height: 100%;
-
+.logo-container1 img {
+  max-width: 100px; /* Set a maximum width for the logos */
+  height: auto; /* Maintain aspect ratio */
+  margin: 10px; /* Optional: add margin around each logo */
+  transition: transform 0.3s; /* Smooth transition for hover effect */
 }
 
-.logo-container img {
-  width: 100%;
-  height: 100%;
+.logo-container1 img:hover {
+  transform: scale(1.1); /* Slightly enlarge image on hover */
 }
 
 
@@ -217,19 +220,18 @@ margin: 0;
 }
 
 .create-cv-button {
-  background: #f1b65d;
+  background: #3cb7f9;
+  color: #fff;
   border: none;
-  margin-top: 1rem;
   padding: 15px 30px;
-  font-size: 1rem;
-  font-weight: 600;
+  font-size: 1.2em;
   cursor: pointer;
   transition: background 0.3s ease;
-  border-radius: 50px;
+  border-radius: 8px;
 }
 
 .create-cv-button:hover {
-  background: #FBAF3B;
+  background: #d35400;
 }
 
 /* New Sections */
@@ -266,10 +268,6 @@ margin: 0;
   flex: 1;
   padding: 20px;
 }
-.right-section-p{
-  font-size: 0.95rem;
-  text-align: left;
-}
 
 .right-info-section,
 .right-info-section-alt,
@@ -281,13 +279,17 @@ margin: 0;
   padding: 20px;
 }
 
-
+.bold-text,
+.bold-text-alt,
+.bold-text-alt1,
+.bold-text-alter {
+  font-weight: bold;
+}
 
 .review-section {
   display: flex;
   justify-content: space-between; /* Optional: Adjusts space between cards */
   gap: 20px; /* Optional: Adjusts gap between cards */
-  padding: 5rem 10rem;
 }
 
 .review-card {
@@ -309,25 +311,16 @@ margin: 0;
 
 
 .testimonial-section {
-  background-color: #091655;
+  background: #4020a1;
   padding: 50px 0;
   text-align: center;
-  color: white;
 }
-.testimonial-section p{
-  text-align: center;
-  font-size: 0.9rem;
-}
-.testimonial-section h2{
-  color: white;
-  font-style: italic;
-}
+
 .testimonial-cards {
   display: flex;
   justify-content: space-around;
-  width: 80rem;
-  /* align-items: center; */
-  margin: 2rem auto;
+  max-width: 1200px;
+  margin: 0 auto;
   flex-wrap: wrap;
 }
 
@@ -338,7 +331,6 @@ margin: 0;
   background: #ecf0f1;
   border-radius: 8px;
   box-shadow: 0 4px 8px rgba(0,0,0,0.1);
-  background-color: #222E66;
 }
 
 .testimonial-author {
@@ -348,10 +340,9 @@ margin: 0;
 
 .transform-section {
   background: #e9f4fc;
-  padding: 2rem 20rem;
+  padding: 50px 0;
   text-align: center;
   color: #fff;
-  
 }
 
 .transform-button {
@@ -359,27 +350,12 @@ margin: 0;
   color: #fff;
   border: none;
   padding: 15px 30px;
-  font-size: 1rem;
+  font-size: 1.2em;
   cursor: pointer;
   transition: background 0.3s ease;
-  border-radius: 50px;
+  border-radius: 8px;
 }
 
 .transform-button:hover {
   background: #6011fe;
-}
-.transform-text{
-  text-align: center;
-}
-.trial-content p{
-  text-align: center;
-}
-.testmonial{
-  display: flex;
-  justify-content: center;
- 
- 
-}
-.testmonial div{
-  width: 20rem;
 }

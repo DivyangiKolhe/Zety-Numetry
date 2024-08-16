@@ -29,7 +29,10 @@ const AboutUs = () => {
 
             events.forEach(event => {
                 const eventPosition = event.offsetTop;
-                if (scrollPosition > eventPosition) {
+                const eventHeight = event.offsetHeight;
+                const eventBottom = eventPosition + eventHeight;
+
+                if (scrollPosition > eventPosition && scrollPosition < eventBottom) {
                     event.classList.add('active');
                 } else {
                     event.classList.remove('active');
@@ -43,6 +46,8 @@ const AboutUs = () => {
             window.removeEventListener('scroll', handleScroll);
         };
     }, []);
+
+
     const scrollRef = useRef(null);
 
     useEffect(() => {
@@ -54,28 +59,31 @@ const AboutUs = () => {
 
         return () => clearInterval(scrollInterval);
     }, []);
-
     const scrollLeft = () => {
-        if (scrollRef.current) {
-            scrollRef.current.scrollLeft -= 300;
-        }
-    };
-
-    const scrollRight = () => {
-        if (scrollRef.current) {
-            scrollRef.current.scrollLeft += 300;
-        }
-    };
-
+        const container = document.querySelector('.carousel1');
+        container.scrollBy({
+          left: -container.offsetWidth,
+          behavior: 'smooth'
+        });
+      };
+      
+      const scrollRight = () => {
+        const container = document.querySelector('.carousel1');
+        container.scrollBy({
+          left: container.offsetWidth,
+          behavior: 'smooth'
+        });
+      };
+      
 
 
     return (
-        <div className="about-us-container">
-            <div className="about-us-banner">
+        <div className="about-us-container1">
+            <div className="about-us-banner1">
                 <h1>About us</h1>
                 <p>Zety is a career site powered by some of the best career experts and a community of 40 million readers a year.</p>
             </div>
-            <div className="media-mentions">
+            <div className="media-mention1">
                 <img src={guardianLogo} alt="The Guardian" />
                 <img src={huffpostLogo} alt="HuffPost" />
                 <img src={lifehackerLogo} alt="Lifehacker" />
@@ -107,11 +115,12 @@ const AboutUs = () => {
                     <p>From resume and interview advice to networking, our guides have been recognized by over 200 universities and organizations worldwide.
 
                     </p>
+                    <h2>Company Timeline </h2>
+
                 </div>
             </div>
             {/* Timeline Section */}
             <div className="timeline">
-                <h3>Company Timeline </h3>
                 <div className="timeline-line" id="timelineLine"></div>
                 <div className="timeline-event">
                     <div className="timeline-date">05.2014</div>
@@ -214,7 +223,10 @@ const AboutUs = () => {
                         { name: "Caio Sampaio, CPRW", title: "Certified Professional Resume Writer (CPRW)", description: "Caio is a career and professional development specialist with 4 years of experience. He holds a professional resume writing certification." },
                         { name: "Christian Eilers, CPRW", title: "Certified Professional Résumé Writer, Career Expert", description: "Christian is a career expert and Certified Professional Resume Writer. His guides cover every aspect of the job-hunting process." },
                         { name: "Danuta Detyna, CPRW", title: "Writer, Certified Professional Résumé Writer", description: "Danuta Detyna is a writer and career expert. As an empathetic writer with over seven years of experience, she focuses on delivering real, actionable advice that you can use to boost your career." },
-                        { name: "Dominika Kowalska, CPRW", title: "Editor, Certified Professional Résumé Writer", description: "Dominika Kowalska is a career expert and Certified Professional Resume Writer (CPRW) who’s spent the last 5 years helping people develop their careers." }
+                        { name: "Dominika Kowalska, CPRW", title: "Editor, Certified Professional Résumé Writer", description: "Dominika Kowalska is a career expert and Certified Professional Resume Writer (CPRW) who’s spent the last 5 years helping people develop their careers." },
+                        { name: "Emilia Mucha, CPRW", title: "Writer, Career Expert", description: "Emilia is a career expert and a job-hunting advisor. Her articles are informative and engaging, providing readers with practical tips and strategies for creating job-winning resumes and cover letters and navigating the job market with confidence." },
+                         { name: "EMPTY Adam Joyce,Writer", title: "Career Expert", description: "Adam is an enthusiastic career expert dedicated to providing job-seekers with resume building and job hunting advice. He draws on his extensive employment history to write content that is informed and which can be actionable in real life." }
+                        
                     ].map(member => (
                         <div className="team-member" key={member.name}>
                             <h4>{member.name}</h4>
@@ -230,13 +242,13 @@ const AboutUs = () => {
                 <button className="help-button">We are here to help you out?</button>
 
             </div>
-            <div className="as-seen-in">
+            <div className="as-seen-in1">
                 <h2>As seen in</h2>
-                <div className="carousel-container">
+                <div className="carousel-container1">
                     <button className="scroll-arrow left" onClick={scrollLeft}>
                         &lt;
                     </button>
-                    <div className="carousel" ref={scrollRef}>
+                    <div className="carousel1" ref={scrollRef}>
                         <div className="carousel-item">
                             <div className="carousel-item-bg">
                                 <img src="data:image/jpeg;base64,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" alt="Business Insider" />

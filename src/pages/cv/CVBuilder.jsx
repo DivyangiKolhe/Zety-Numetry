@@ -29,6 +29,7 @@ import matching from '../../images/cv-builder/matching.jpg';
 import geek from '../../images/cv-builder/geek.png';
 import howg from '../../images/cv-builder/howg.png';
 
+
 const CVBuilder = () => {
   const navigate = useNavigate();
 
@@ -51,13 +52,13 @@ const CVBuilder = () => {
     dots: true,
     infinite: true,
     speed: 500,
-    slidesToShow: 2,
+    slidesToShow: 3,
     slidesToScroll: 1,
     responsive: [
       {
         breakpoint: 1024,
         settings: {
-          slidesToShow: 2,
+          slidesToShow: 3,
           slidesToScroll: 1,
           infinite: true,
           dots: true
@@ -66,7 +67,7 @@ const CVBuilder = () => {
       {
         breakpoint: 600,
         settings: {
-          slidesToShow: 1,
+          slidesToShow: 2,
           slidesToScroll: 1
         }
       },
@@ -92,36 +93,36 @@ const CVBuilder = () => {
             <button className="cta-button" onClick={handleCreateCVClick}>Create Your CV Now</button>
           </div>
           <div className="right-section">
-            <img src={web} alt="CV Preview" className='right-section-p' onClick={handleCreateCVClick} />
+            <img src={web} alt="CV Preview" onClick={handleCreateCVClick} />
           </div>
         </main>
-      
+      </div>
 
       <section className="new-section">
         <h2>Make a job-winning CV in four simple steps</h2>
         <div className="steps-container">
-          <div className="step-cv-build">
+          <div className="step">
             <img src={newSectionImage1} alt="Step 1" />
             <h3>Step 1</h3>
-            <p className='bold-p'>Pick a template</p>
+            <p>Pick a template</p>
             <p>Select from 18 professional templates crafted by career experts and designers to boost your chances of landing an interview.</p>
           </div>
-          <div className="step-cv-build">
+          <div className="step">
             <img src={newSectionImage2} alt="Step 2" />
             <h3>Step 2</h3>
-            <p className='bold-p'>Use expert prompts to fill it out</p>
+            <p>Use expert prompts to fill it out</p>
             <p>Quickly add customized, job-specific content to your resume created by Certified Professional Resume Writers.</p>
           </div>
-          <div className="step-cv-build">
+          <div className="step">
             <img src={newSectionImage3} alt="Step 3" />
             <h3>Step 3</h3>
-            <p className='bold-p'>Play with the design</p>
+            <p>Play with the design</p>
             <p>Easily adjust colors, fonts, and layout using our intuitive interface.</p>
           </div>
-          <div className="step-cv-build">
+          <div className="step">
             <img src={newSectionImage4} alt="Step 4" />
             <h3>Step 4</h3>
-            <p className='bold-p'>Hit download and enjoy</p>
+            <p>Hit download and enjoy</p>
             <p>Download your polished resume in the preferred file format and apply for your dream job right away.</p>
           </div>
         </div>
@@ -133,25 +134,29 @@ const CVBuilder = () => {
           {templates.map((template, index) => (
             <div className="template-card" key={index}>
               <img src={template.image} alt={template.name} className="template-image" />
-              <button className="use-template-button" onClick={handleCreateCVClick}>Use This Template</button>
               <div className="template-info">
                 <h3>{template.name}</h3>
                 <p>{getDescription(template.name)}</p>
               </div>
+              <button className="use-template-button" onClick={handleCreateCVClick}>Use This Template</button>
             </div>
           ))}
         </Slider>
       </section>
 
-      <section className="customer-section">
-        <p>We’ve developed our resume builder with one goal in mind: to help you find a great job faster. Our resume maker comes with ATS-optimized layouts and a wizard that guides you through every step of the process.
-        </p>
-        <p>Plus, you'll get ready-to-use AI-generated suggestions for every section of your resume, personalized to match your desired position. Don’t feel like writing? Just drag and drop the content that suits you and let our resume editor do the rest.
-        </p>
-        <p>Have a hard time choosing which style is right for you? Check out all our resume templates here, and read more about their advantages. Looking to make a CV instead? Try our easy-to-use CV Builder that comes with professional CV templates.</p>
-
-        <div className="logo-img-container">
-          <img src={Logos}  />
+      <section className="customer-section1">
+        <p>Our resume builder comes with ATS-optimized layouts and a wizard that guides you through every step of the process.</p>
+        <p>Plus, you'll get ready-to-use AI-generated suggestions for every section of your resume, personalized to match your desired position. Don't feel like writing? Just drag and drop the content that suits you and let our resume editor do the rest.</p>
+        <p>Have a hard time choosing which style is right for you? Check out all our resume templates here, and read more about their advantages.</p>
+        <p>Looking to make a CV instead? Try our easy-to-use CV Builder that comes with professional CV templates.</p>
+        <h2>Our customers have been hired by:</h2>
+        <div className="logo-container1">
+          <img src={microsoftLogo} alt="Microsoft" onClick={handleLogoClick} />
+          <img src={amazonLogo} alt="Amazon" onClick={handleLogoClick} />
+          <img src={attLogo} alt="AT&T" onClick={handleLogoClick} />
+          <img src={walmartLogo} alt="Walmart" onClick={handleLogoClick} />
+          <img src={fedexLogo} alt="FedEx" onClick={handleLogoClick} />
+          <img src={orangeLogo} alt="Orange" onClick={handleLogoClick} />
         </div>
         <div className="reviews-section">
           <h2>Read what people say about our CV maker online:</h2>
@@ -188,7 +193,7 @@ const CVBuilder = () => {
     </div>
     <div className="right-info-section">
       <h2>Create your CV easily</h2>
-      <p className="font-1">
+      <p className="bold-text">
         Creating your CV has never been easier or faster. Simply choose a template, and our intuitive CV maker will do the rest, guiding you every step of the way with personalized tips from our dedicated team of career experts. You'll have a professionally-crafted, impressive CV ready in just minutes.
       </p>
     </div>
@@ -198,7 +203,7 @@ const CVBuilder = () => {
   <div className="info-content-alt">
     <div className="left-info-section-alt">
       <h2>Boost your CV with ready-made content from career experts</h2>
-      <p>
+      <p className="bold-text-alt">
       Struggling with writing the perfect CV? Say goodbye to your worries. Our CV builder comes loaded with ready-made content crafted by career experts tailored for any job or industry you're pursuing. They are ready to use in any CV section, so wait no more and start creating your CV today.
       </p>
     </div>
@@ -214,7 +219,7 @@ const CVBuilder = () => {
     </div>
     <div className="right-info-section1">
       <h2>Refresh your old CV</h2>
-      <p>
+      <p className="bold-text">
       Is your CV outdated? Elevate it to the highest standard and ensure full ATS compatibility with just one click. Simply upload it to our CV maker, and we'll revamp it using our modern templates – all for free. Save valuable time and embrace your new, polished CV in mere minutes      </p>
     </div>
   </div>
@@ -223,7 +228,7 @@ const CVBuilder = () => {
   <div className="info-content-alt1">
     <div className="left-info-section-alt1">
       <h2>Review and improve your CV</h2>
-      <p>
+      <p className="bold-text-alt1">
       When your CV is done, our CV creator will score it. You’ll get personalized tips and suggestions on how to improve your CV to land that dream job. Thanks to that, you’ll have a top-notch CV with a minimum effort.      </p>
     </div>
     <div className="right-info-section-alt1">
@@ -238,7 +243,7 @@ const CVBuilder = () => {
     </div>
     <div className="right-info-section2">
       <h2>Download your CV in multiple formats</h2>
-      <p>
+      <p className="bold-text">
       Craft a unique CV tailored to each job application you pursue. Fine-tune it to your preferences, adding new sections or switching templates as needed, and our CV maker will make sure the layout stays intact. Once it's ready, download it in PDF, Word, or TXT format and boost your job hunt right away.</p>
     </div>
   </div>
@@ -268,15 +273,8 @@ const CVBuilder = () => {
 
 <section className="testimonial-section">
   <h2>"I got the job!"</h2>
-  <div className="testmonial">
-    <div>
-    <p className="testimonial-header">Imagine you finally got an offer for the job you’ve always wanted, not the one you had to take. How does it feel? With Zety, it can all become a reality.</p>
-    </div>
-    <div>
-    <p className="testimonial-header">Use the best online CV maker and enjoy your "employed happily ever after".</p>
-    </div>
-  </div>
-  
+  <p className="testimonial-header">Imagine you finally got an offer for the job you’ve always wanted, not the one you had to take. How does it feel? With Zety, it can all become a reality.</p>
+  <p className="testimonial-header">Use the best online CV maker and enjoy your "employed happily ever after".</p>
   
   <div className="testimonial-cards">
     <div className="testimonial-card">
@@ -314,8 +312,6 @@ const CVBuilder = () => {
   </div>
 </section>
 
-
-    </div>
     </div>
   );
 
